@@ -123,4 +123,130 @@
 
 .chatArea-container {
   flex: 0.7;
+  padding: 25px 20px 25px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eef1ff;
+  border-radius: 20px;
+  padding: 15px 25px 15px 15px;
+}
+
+.chat-head > div {
+  display: flex;
+}
+
+.dp-chat-head {
+  background-color: #aac4ff;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.info-chat-head {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+  justify-content: center;
+}
+
+.info-chat-head h3 {
+  font-size: 2rem;
+}
+
+.info-chat-head p {
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.chat-space {
+  flex: 1;
+  border-radius: 20px;
+  background-color: #eef1ff;
+  margin-top: 15px;
+  padding: 0px 20px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.chat-space::-webkit-scrollbar {
+  display: none;
+}
+
+.yourMsg-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: self-start;
+}
+
+.yourMsg-container div {
+  background-color: #cbf1f5;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.yourMsg-name {
+  color: #3674b5;
+}
+
+.yourMsg-msg {
+  margin-top: 5px;
+  font-size: 1.2rem;
+}
+
+.yourMsg-time {
+  margin-top: 5px;
+  text-align: right;
+}
+
+.myMsg-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: self-end;
+}
+
+.myMsg-container div {
+  background-color: #dcd6f7;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.myMsg-msg {
+  font-size: 1.2rem;
+}
+
+.myMsg-time {
+  margin-top: 5px;
+  text-align: right;
+}
+
+.chat-send {
+  border-radius: 20px;
+  background-color: #eef1ff;
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 25px 10px 30px;
+}
+
+.chat-send input {
+  width: 100%;
+  font-size: 2.2rem;
+  margin-right: 20px;
+  background-color: #eef1ff;
 }
