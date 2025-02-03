@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.app-container {
+  background-color: #c5baff;
+  min-height: 100vh;
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container {
+  display: flex;
+  background-color: #cadefc;
+  min-height: 90vh;
+  max-height: 90vh;
+  min-width: 95vw;
+  border-radius: 20px;
+}
+
+.sideMenu-container {
+  flex: 0.3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.optionMenu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #eef1ff;
+  width: 90%;
+  padding: 15px;
+  border-radius: 20px;
+  margin-top: 25px;
+}
+
+.search {
+  display: flex;
+  background-color: #eef1ff;
+  width: 90%;
+  padding: 10px;
+  border-radius: 20px;
+  margin-top: 20px;
+}
+
+.search input {
+  margin-left: 15px;
+  padding-left: 15px;
+  width: 70%;
+  font-size: 1.3rem;
+  background-color: #eef1ff;
+}
+
+.friendList {
+  flex: 1;
+  background-color: #eef1ff;
+  width: 90%;
+  padding: 15px;
+  border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.friendList::-webkit-scrollbar {
+  display: none;
+}
+
+.friends-container {
+  background-color: #d2daff;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.dp {
+  background-color: #aac4ff;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.friend-dp {
+  font-size: 2rem;
+}
+
+.info {
+  flex: 1;
+  height: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info > p {
+  font-size: 2rem;
+  padding-left: 15px;
+}
+
+.info div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 20px;
+}
+
+.chatArea-container {
+  flex: 0.7;
+}
