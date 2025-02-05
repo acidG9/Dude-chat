@@ -14,14 +14,74 @@
   align-items: center;
 }
 
+/* Login page */
+
+.login-container {
+  display: flex;
+  background-color: #cadefc;
+  min-height: 90vh;
+  min-width: 95vw;
+  max-width: 95vw;
+  border-radius: 20px;
+}
+
+.login-logo {
+  flex: 0.3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.login-logo img {
+  width: 90%;
+}
+
+.login-form {
+  flex: 0.7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-form > div {
+  background-color: #eef1ff;
+  min-width: 90%;
+  min-height: 90%;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.login-form h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #73c7c7;
+}
+
+.login-input {
+  width: 30%;
+}
+
+.login-form button {
+  font-size: 1.2rem;
+}
+
+/* Main Container */
+
 .main-container {
   display: flex;
   background-color: #cadefc;
   min-height: 90vh;
   max-height: 90vh;
   min-width: 95vw;
+  max-width: 95vw;
   border-radius: 20px;
 }
+
+/* Side Menu */
 
 .sideMenu-container {
   flex: 0.3;
@@ -120,6 +180,39 @@
   padding-left: 15px;
   padding-right: 20px;
 }
+
+/* Welcome Page */
+
+.welcomePage-container {
+  flex: 0.7;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcomePage-container div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+.welcomePage-container img {
+  width: 50%;
+  height: auto;
+  border-radius: 50px;
+}
+
+.welcomePage-container p {
+  margin-top: 30px;
+  font-size: 3rem;
+  text-align: center;
+  color: #b1b2ff;
+}
+
+/* Chat Area */
 
 .chatArea-container {
   flex: 0.7;
@@ -248,5 +341,30 @@
   width: 100%;
   font-size: 2.2rem;
   margin-right: 20px;
+  background-color: #eef1ff;
+}
+
+/* Create Group */
+
+.createGrp-container {
+  flex: 0.7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.createGrp-container div {
+  width: 80%;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 20px;
+  background-color: #eef1ff;
+}
+
+.createGrp-container input {
+  width: 90%;
+  font-size: 2.5rem;
   background-color: #eef1ff;
 }
