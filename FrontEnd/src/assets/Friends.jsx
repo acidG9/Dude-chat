@@ -10,8 +10,8 @@ const Friends = ({props}) => {
             <div className="info">
               <p className="friend-name">{props.name}</p>
               <div>
-                 <p className="friend-lastMsg">{props.lastMsg}</p>
-                 <p className="friend-timestamp">{props.timestamp}</p>
+                 <p className="friend-lastMsg">{props?.lastMsg}</p>
+                 <p className="friend-timestamp">{props?.timestamp}</p>
               </div>
             </div>
         </div>
