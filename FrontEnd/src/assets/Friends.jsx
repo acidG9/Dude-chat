@@ -1,9 +1,16 @@
 import PropTypes from "prop-types";
+import { useNavigate } from "react-router-dom";
 
 const Friends = ({props}) => {
 
+  const navigate= useNavigate();
+
     return (
-        <div className="friends-container">
+        <div className="friends-container" onClick={
+          ()=>{
+            navigate('chat')
+          }
+        }>
             <div className="dp">
               <p className="friend-dp">{props.name[0].toUpperCase()}</p>
             </div>

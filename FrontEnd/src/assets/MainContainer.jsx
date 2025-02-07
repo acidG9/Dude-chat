@@ -1,17 +1,11 @@
 import SideMenu from "./sideMenu"
-// import WelcomePage from "./WelcomePage";
-// import ChatArea from "./ChatArea"
-// import CreateGrp from "./CreateGrp";
-import Groups from "./Groups";
+import { Outlet } from "react-router-dom";
 
 const MainContainer = () => {
     return (
         <div className="main-container">
           <SideMenu />
-          {/* <WelcomePage /> */}
-          {/* <ChatArea /> */}
-          {/* <CreateGrp /> */}
-          <Groups />
+          <Outlet />
         </div>
     );
 };

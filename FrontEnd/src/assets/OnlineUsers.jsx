@@ -3,26 +3,35 @@ import { IconButton } from "@mui/material";
 import SearchIcon from '@mui/icons-material/Search';
 import Group from "./Group";
 
-const Groups = () => {
+const OnlineUsers = () => {
 
     const [group]= React.useState([
         {
-            name: "K21GP",
+            name: "Sonu Bhaiya",
         },
         {
-            name: "K21GX",
+            name: "Monu Bhaiya",
         },
         {
-            name: "K21RX",
+            name: "Kumkum",
         },
         {
-            name: "K21FA",
+            name: "Sumit",
         },
         {
-            name: "K21AK",
+            name: "Akshansh",
         },
         {
-            name: "K21RB",
+            name: "Chintu",
+        },
+        {
+            name: "Saransh",
+        },
+        {
+            name: "Chinu",
+        },
+        {
+            name: "Kannu",
         },
     ]);
 
@@ -30,7 +39,7 @@ const Groups = () => {
         <div className="groups-container">
             <div className="groups-header">
                 <img src="/bgLess.png" alt="logo" />
-                <p>Available Groups</p>
+                <p>Online Users</p>
             </div>
             <div className="groups-search">
                 <IconButton>
@@ -51,4 +60,4 @@ const Groups = () => {
     );
 };
 
-export default Groups;
+export default OnlineUsers;

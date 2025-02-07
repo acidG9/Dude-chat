@@ -7,6 +7,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { IconButton } from '@mui/material';
 import Friends from './Friends';
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const SideMenu = () => {
 
@@ -43,20 +44,38 @@ const SideMenu = () => {
         },
     ]);
 
+    const navigate=useNavigate();
+
     return (
         <div className="sideMenu-container">
             <div className="optionMenu">
-                <IconButton>
+                <IconButton onClick={
+                    ()=>{
+                        navigate('welcome')
+                    }
+                }>
                     <AccountCircleIcon />
                 </IconButton>
                 <div>
-                  <IconButton>
+                  <IconButton onClick={
+                    ()=>{
+                        navigate('online-users')
+                    }
+                  }>
                       <PersonAddIcon />
                   </IconButton>
-                  <IconButton>
+                  <IconButton onClick={
+                    ()=>{
+                        navigate('groups')
+                    }
+                  }>
                       <GroupAddIcon />
                   </IconButton>
-                  <IconButton>
+                  <IconButton onClick={
+                    ()=>{
+                        navigate("create-grp")
+                    }
+                  }>
                       <AddCircleOutlineIcon />
                   </IconButton>
                   <IconButton>
