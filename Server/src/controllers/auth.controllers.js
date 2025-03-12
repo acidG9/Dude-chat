@@ -30,7 +30,7 @@ export const login= async (req, res)=>{
 
     } catch (error) {
         console.log("Error in signup controller", error.message);
-        res.status(500).json({messge:"Internal server error"});
+        res.status(500).json({message:"Internal server error"});
     }
 };
 
@@ -113,6 +113,15 @@ export const profile= async (req, res)=> {
         res.status(200).json(updatedUser);
     } catch (error) {
         console.log("error in profile controller", error.message);
+        res.status(500).json({message:"Internal server error"});
+    }
+};
+
+export const check= (req, res)=>{
+    try {
+        res.status(200).json(req.user);
+    } catch (error) {
+        console.log("error in check controller", error.message);
         res.status(500).json({message:"Internal server error"});
     }
 };
