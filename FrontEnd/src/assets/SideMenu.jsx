@@ -51,7 +51,7 @@ const SideMenu = () => {
             <div className="optionMenu">
                 <IconButton onClick={
                     ()=>{
-                        navigate('welcome')
+                        navigate('profile')
                     }
                 }>
                     <AccountCircleIcon />

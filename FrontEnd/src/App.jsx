@@ -9,6 +9,8 @@ import Groups from "./assets/Groups"
 import OnlineUsers from "./assets/OnlineUsers"
 import { useAuthStore } from "./assets/store/useAuthStore"
 import CustomizedProgressBars from "./assets/lib/progress.jsx"
+import { Toaster } from "react-hot-toast"
+import Profile from "./assets/Profile.jsx"
 
 function App() {
 
@@ -17,8 +19,6 @@ function App() {
   useEffect(()=>{
     checkAuth()
   }, [checkAuth]);
-
-  console.log({authUser});
 
   if(isCheckingAuth && !authUser)return(
     <CustomizedProgressBars />
@@ -30,12 +30,15 @@ function App() {
         <Route path="/" element={ !authUser ? <Login /> : <Navigate to="/home/welcome" /> } />
         <Route path="/home" element={ authUser ? <MainContainer /> : <Navigate to="/" /> } >
           <Route path="welcome" element={ authUser ? <WelcomePage /> : <Navigate to="/" /> } />
+          <Route path="profile" element={ authUser ? <Profile /> : <Navigate to="/" /> } />
           <Route path="chat" element={ authUser ? <ChatArea /> : <Navigate to="/" /> } />
           <Route path="create-grp" element={ authUser ? <CreateGrp /> : <Navigate to="/" /> } />
           <Route path="groups" element={ authUser ? <Groups /> : <Navigate to="/" /> } />
           <Route path="online-users" element={ authUser ? <OnlineUsers /> : <Navigate to="/" /> } />
         </Route>
       </Routes>
+
+      <Toaster />
     </div>
   )
 }

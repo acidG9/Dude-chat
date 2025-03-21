@@ -1,14 +1,16 @@
 import React from 'react';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import { useNavigate } from 'react-router-dom';
 import InputAdornment from '@mui/material/InputAdornment';
 import VisibilityOffIcon from '@mui/icons-material/VisibilityOff';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import { IconButton } from '@mui/material';
-
+import toast from 'react-hot-toast';
+import { useAuthStore } from './store/useAuthStore';
 
 const Login = () => {
+
+    const { signup, isSigningUp, login, isLoggingIn } = useAuthStore();
 
     const [isRegistered, setIsRegistered]= React.useState(true);
     const [showPass, setShowPass]= React.useState(false);
@@ -22,13 +24,32 @@ const Login = () => {
         email:"",
     });
 
-    // function validateForm(){}
+    function rValidateForm(){
+        if (!rFormData.fullName.trim()) return toast.error("UserName is required");
+        if (!rFormData.email.trim()) return toast.error("Email is required");
+        if (!/\S+@\S+\.\S+/.test(rFormData.email)) return toast.error("Invalid email format");
+        if (!rFormData.password) return toast.error("Password is required");
+        if (rFormData.password.length < 6) return toast.error("Password must be at least 6 characters");
+    
+        return true;
+    }
+
+    function lValidateForm(){
+        if (!lFormData.email.trim()) return toast.error("Email is required");
+        if (!/\S+@\S+\.\S+/.test(lFormData.email)) return toast.error("Invalid email format");
+        if (!lFormData.password) return toast.error("Password is required");
+        if (lFormData.password.length < 6) return toast.error("Password must be at least 6 characters");
+    
+        return true;
+    }
 
     function handleSubmit(e){
         e.preventDefault();
+        if (!isRegistered && !rValidateForm()) return;
+        if (isRegistered && !lValidateForm()) return;
+        if (!isRegistered) signup(rFormData);
+        if (isRegistered) login(lFormData);
     }
-
-    const navigate= useNavigate();
 
     function toggle(){
         setIsRegistered(!isRegistered);
@@ -63,11 +84,7 @@ const Login = () => {
                             ),
                           }}
                         />
-                        <Button variant="outlined" color="success" onClick={
-                            ()=>{
-                                navigate('app/welcome')
-                            }
-                        }>{isRegistered?(<p>Login</p>):(<p>Register</p>)}</Button>
+                        <Button variant="outlined" color="success" type='submit' disabled={isSigningUp || isLoggingIn} >{isRegistered?(<p>Login</p>):(<p>Register</p>)}</Button>
                     </form>
                     {isRegistered?(<p>Don&apos;t have an account...    <span onClick={toggle} >register</span></p>):(<p>Already have an account...    <span onClick={toggle} >login</span></p>)}
                 </div>

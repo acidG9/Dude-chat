@@ -177,6 +177,12 @@
   font-size: 2rem;
 }
 
+.profile-pic-image-small {
+  height: 4rem;
+  width: auto;
+  border-radius: 50%;
+}
+
 .info {
   flex: 1;
   height: 4rem;
@@ -260,6 +266,7 @@
   justify-content: center;
   align-items: center;
   font-size: 2rem;
+  overflow: hidden;
 }
 
 .info-chat-head {
@@ -485,4 +492,148 @@
 
 .grp-info p {
   font-size: 2.5rem;
+}
+
+/* Profile */
+
+.profile-container {
+  flex: 0.7;
+  padding: 25px 20px 25px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eef1ff;
+  border-radius: 20px;
+  padding: 15px 25px 15px 15px;
+}
+
+.profile-head > div {
+  display: flex;
+}
+
+.profile-body {
+  flex: 1;
+  border-radius: 20px;
+  background-color: #eef1ff;
+  margin-top: 15px;
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.profile-body-1 {
+  flex: 0.75;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+}
+
+.profile-pic {
+  background-color: #aac4ff;
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-pic-div1 {
+  width: 15rem;
+  height: 15rem;
+  border-radius: 50%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.profile-pic-image {
+  height: 15rem;
+  width: auto;
+  border-radius: 50%;
+}
+
+.profile-static-alphabet {
+  font-size: 7rem;
+}
+
+.camera {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  z-index: 10;
+  background-color: #cadefc;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#dpUpload {
+  display: none;
+}
+
+.profile-body-1 {
+  flex: 0.75;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 2rem;
+}
+
+.profilePage-input {
+  width: 40%;
+}
+
+.profile-body-2 {
+  flex: 0.25;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  margin-bottom: 1rem;
+}
+
+.profile-body-2 > h1 {
+  width: 80%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.profile-body-2 > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+}
+
+.hr {
+  width: 80%;
+  height: 3px;
+  border: none;
+  background: linear-gradient(to right, #73c7c7, #b1b2ff);
+  border-radius: 2px;
+  margin: 15px 0;
+  opacity: 0.8;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-top: -0.5rem;
+  margin-bottom: -0.5rem;
 }
