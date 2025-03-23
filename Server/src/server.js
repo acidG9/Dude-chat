@@ -5,9 +5,13 @@ import messageRoutes from "./routes/message.routes.js"
 import { dbConnect } from "./library/db.lib.js"
 import cookieParser from "cookie-parser"
 import cors from "cors"
+import { app, server } from "./library/socket.lib.js";
+import path from "path";
 
-const app= express();
 dotenv.config();
+
+const __dirname = path.resolve();
+const PORT= process.env.PORT;
 
 app.use(express.json());
 app.use(cookieParser());
@@ -17,11 +21,17 @@ app.use(cors({
 }));
 
 app.use("/api/auth", authRoutes);
-app.use("/api/message", messageRoutes);
+app.use("/api/messages", messageRoutes);
 
-const PORT= process.env.PORT;
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static(path.join(__dirname, "../frontend/dist")));
 
-app.listen(PORT,()=>{
+  app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
+  });
+}
+
+server.listen(PORT, ()=>{
     console.log("Server is listening...")
     dbConnect();
 });
